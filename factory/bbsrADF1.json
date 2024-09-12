@@ -1,0 +1,9 @@
+{
+	"name": "bbsrADF1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "023a4af5-7268-45ae-8fd8-20d26301dd13",
+		"tenantId": "937f3257-9ff6-40ab-84a0-8cf4a6a8b58d"
+	}
+}
