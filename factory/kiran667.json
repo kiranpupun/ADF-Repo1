@@ -1,0 +1,9 @@
+{
+	"name": "kiran667",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ba7a2171-9b00-4ac1-aa4f-83f7e17616eb",
+		"tenantId": "937f3257-9ff6-40ab-84a0-8cf4a6a8b58d"
+	}
+}
