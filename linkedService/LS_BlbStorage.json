@@ -2,12 +2,11 @@
 	"name": "LS_BlbStorage",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
-		"description": "LINK SERVICE FOR BLOB",
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"connectionString": "DefaultEndpointsProtocol=https;AccountName=subham038;EndpointSuffix=core.windows.net;",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDUzRjk0MDI2LUNENzgtNDgyMi1BNTUwLTNEQzY0OURDN0NGQV9kZTE3YmNlYS0xZGFiLTRiMmEtYTFkZi03YjRlNjQ2OTJkNzgiDQp9"
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=subham039;EndpointSuffix=core.windows.net;",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEMzQkE2MEZBLTM4OUQtNDczMS05RjlDLTg0NDI2MzdDMEMyMl8yOTM2NjJlZi1mN2UxLTRmYTgtYWQ3ZS04NmZmNTliYjk3NDAiDQp9"
 		}
 	}
 }
