@@ -1,0 +1,59 @@
+{
+	"name": "df_dataflow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "LS_blobSa",
+						"type": "LinkedServiceReference"
+					},
+					"name": "SourceData"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DS_Gen2Dest",
+						"type": "DatasetReference"
+					},
+					"name": "SinkData"
+				}
+			],
+			"transformations": [
+				{
+					"name": "FilterTheRows"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          Country as string,",
+				"          Year as short,",
+				"          Product_Type as string,",
+				"          Sales as short",
+				"     ),",
+				"     useSchema: false,",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'delimited',",
+				"     container: 'src1',",
+				"     fileName: 'Sales_File_2014_2019_USA_UK_IND.csv',",
+				"     columnDelimiter: ',',",
+				"     escapeChar: '\\\\',",
+				"     quoteChar: '\\\"',",
+				"     columnNamesAsHeader: true) ~> SourceData",
+				"SourceData filter(Year == 2014 && Product_Type == 'electronics') ~> FilterTheRows",
+				"FilterTheRows sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     rowUrlColumn:'Product_Type',",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> SinkData"
+			]
+		}
+	}
+}
