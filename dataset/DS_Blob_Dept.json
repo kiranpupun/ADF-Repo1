@@ -1,23 +1,37 @@
 {
-	"name": "DS_Gen2SA",
+	"name": "DS_Blob_Dept",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_GEN2SA",
+			"referenceName": "LS_BlobSA",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileSystem": "dest"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Dept.csv",
+				"container": "src"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "DeptID",
+				"type": "String"
+			},
+			{
+				"name": "DeptName",
+				"type": "String"
+			},
+			{
+				"name": "DeptLocation",
+				"type": "String"
+			}
+		]
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }
